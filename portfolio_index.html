@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout Page</title>
+    <style>
+        /* Base Setup */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* 3-Column Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MyCustomSite</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Your Custom Headline Here</h1>
+        <p>Change this subtitle to describe what your page is all about.</p>
+    </header>
+
+    <main class="container">
+        <h2>Features & Content</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Feature One</h3>
+                <p>This is your first content block. Add text, images, or forms here.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Feature Two</h3>
+                <p>This is your second content block. Everything automatically resizes for mobile screens.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Feature Three</h3>
+                <p>This is your third content block. Customize the background colors in the CSS above.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Custom Built Page.</p>
+    </footer>
+
+</body>
+</html>
