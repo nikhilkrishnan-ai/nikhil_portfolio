@@ -3,247 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhilkrishnan Hari Krishnan | Software Developer & IoT Architect</title>
+    <title>Nikhilkrishnan Hari Krishnan | Portfolio</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #111827;
+            --border: #1f2937;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --accent: #00f0ff;
         }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #e2e8f0;
-            background-color: #0f172a;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        nav {
-            background-color: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #1e293b;
-        }
-        nav .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
-        nav .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: #38bdf8;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        nav a {
-            text-decoration: none;
-            color: #94a3b8;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: #38bdf8;
-        }
-        .hero {
-            padding: 6rem 0;
-            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 50%);
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: #f8fafc;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            margin-bottom: 2.5rem;
-            max-width: 800px;
-        }
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .btn-primary {
-            background-color: #38bdf8;
-            color: #0f172a;
-        }
-        .btn-secondary {
-            border: 1px solid #334155;
-            color: #f8fafc;
-        }
-        .sections {
-            padding: 4rem 0;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .card {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            padding: 2rem;
-            border-radius: 12px;
-        }
-        .card h3 {
-            color: #38bdf8;
-            margin-bottom: 1rem;
-        }
-        .upload-box {
-            border: 2px dashed #334155;
-            padding: 3rem;
-            text-align: center;
-            background: #111827;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            color: #64748b;
-            cursor: pointer;
-        }
-        footer {
-            border-top: 1px solid #1e293b;
-            padding: 2rem 0;
-            text-align: center;
-            color: #64748b;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-main); color: var(--text-primary); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding-bottom: 60px; }
+        
+        /* Navigation */
+        nav { max-width: 1200px; margin: 0 auto; padding: 30px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); font-family: monospace; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; margin-left: 20px; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Container */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero Section */
+        header { padding: 80px 0 60px 0; text-align: center; }
+        header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        header p { font-size: 1.25rem; color: var(--text-secondary); max-width: 750px; margin: 0 auto 40px auto; }
+        .cta-group a { display: inline-block; padding: 12px 30px; border-radius: 6px; font-weight: 600; text-decoration: none; margin: 0 10px; transition: 0.2s; }
+        .btn-primary { background-color: var(--accent); color: #000; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-secondary { border: 1px solid var(--border); color: var(--text-primary); }
+        .btn-secondary:hover { background: var(--bg-card); }
+
+        /* Section Headings */
+        section { padding: 60px 0; border-top: 1px solid var(--border); }
+        h2 { font-size: 2rem; margin-bottom: 40px; color: var(--text-primary); }
+
+        /* Metrics / Highlights Grid */
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .metric-card { background: var(--bg-card); border: 1px solid var(--border); padding: 30px 20px; border-radius: 8px; }
+        .metric-card h3 { color: var(--accent); font-size: 1.35rem; margin-bottom: 12px; }
+        .metric-card p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* Skills Matrix */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .skill-box h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--accent); }
+        .skill-box p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* Case Studies / Projects */
+        .project-meta { color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem; }
+        .project-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .project-column { background: var(--bg-card); border: 1px solid var(--border); padding: 25px; border-radius: 12px; }
+        .project-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--border); display: block; }
+        .project-column h3 { font-size: 1.3rem; color: var(--accent); margin-bottom: 15px; }
+        .project-column ul { padding-left: 20px; color: var(--text-secondary); }
+        .project-column li { margin-bottom: 10px; font-size: 0.95rem; }
+
+        /* Experience Elements */
+        .exp-item { margin-bottom: 40px; }
+        .exp-title { font-weight: bold; font-size: 1.2rem; }
+        .exp-meta { color: var(--accent); font-size: 0.95rem; margin-bottom: 10px; }
+        .exp-item ul { padding-left: 20px; color: var(--text-secondary); }
+        .exp-item li { margin-bottom: 8px; font-size: 0.95rem; }
+
+        /* Certs Link List */
+        .cert-list li { list-style: none; padding: 10px 0; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+        .cert-list strong { color: var(--text-primary); }
+
+        /* Footer Info */
+        footer { margin-top: 80px; padding: 40px 0; text-align: center; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="container nav-content">
-            <div class="logo">[NK]</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#tech-stack">Tech Stack</a></li>
-                <li><a href="#geosense">GeoSense</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="logo">NK_</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">GeoSense</a>
+            <a href="#experience">Experience</a>
         </div>
     </nav>
 
-    <header class="hero container">
-        <h1>Architecting Real-Time Intelligence</h1>
-        <p><strong>Nikhilkrishnan Hari Krishnan (NK)</strong> | Software Developer, IoT Architect & Data Analytics Specialist. Bridging the gap between physical telemetry, automated cloud infrastructure, and enterprise logistics.</p>
-        <div class="btn-group">
-            <a href="#geosense" class="btn btn-primary">View GeoSense Engine</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-    </header>
-
-    <main class="container sections">
-        
-        <h2>Engineering Smart Spaces & Intelligent Data Pipelines</h2>
-        <p style="color: #94a3b8; margin-bottom: 2rem;">Innovative and results-driven Software Developer & IoT Architect with expertise in data analytics, cloud infrastructure, and enterprise logistics systems. Proven track record in designing real-time telemetry diagnostics, developing automated data pipelines, and engineering custom 3D WebGL data layers.</p>
-
-        <div class="grid">
-            <div class="card">
-                <h3>99.5% Accuracy</h3>
-                <p>Operational Excellence: Driving precision in enterprise logistics using advanced Python and SQL automated data pipelines.</p>
+    <main class="container">
+        <!-- Hero Section -->
+        <header id="about">
+            <h1>Engineering Smart Spaces &<br><span style="color:var(--accent)">Intelligent Data Pipelines</span></h1>
+            <p>Nikhilkrishnan Hari Krishnan (NK) — Software Developer, IoT Architect & Data Analytics Specialist. Bridging physical telemetry, automated cloud infrastructure, and enterprise logistics backends.</p>
+            <div class="cta-group">
+                <a href="#projects" class="btn-primary">View GeoSense Engine</a>
+                <a href="mailto:nikhilkr51@gmail.com" class="btn-secondary">Contact Infrastructure</a>
             </div>
-            <div class="card">
+        </header>
+
+        <!-- Executive Highlights -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <h3>99.5% Precision</h3>
+                <p>Driving telemetry stream validation and inventory processing tracking through automated analytics frameworks.</p>
+            </div>
+            <div class="metric-card">
                 <h3>3D WebGL</h3>
-                <p>Custom Data Layers: Engineering immersive, real-time telemetry diagnostics and visualizations.</p>
+                <p>Migrating legacy tabular structural logs into interactive, real-time spatial mapping diagnostics layers.</p>
             </div>
-            <div class="card">
+            <div class="metric-card">
                 <h3>AI RLHF</h3>
-                <p>Model Evaluation: Expertise in fine-tuning and evaluating artificial intelligence responses.</p>
+                <p>Advanced validation alignment, prompt evaluations, and structural pipeline linguistic quality assurance.</p>
             </div>
-            <div class="card">
-                <h3>WMS Architecture</h3>
-                <p>Google & IBM Certified: Certified professional in designing robust cloud infrastructure and enterprise logistics systems.</p>
+            <div class="metric-card">
+                <h3>Logistics Cloud</h3>
+                <p>Combining Google Cloud, IBM AI, and Alison Warehouse Management credentials to build secure infrastructure.</p>
             </div>
-        </div>
+        </section>
 
-        <h2 style="margin-top: 4rem;">Technical Arsenal</h2>
-        <p style="color: #94a3b8;">A comprehensive stack bridging cloud infrastructure, AI evaluation, and telemetry forensics.</p>
-        
-        <div class="grid">
-            <div class="card">
-                <h3>Languages & Web</h3>
-                <p>Python, SQL, JS, HTML5/CSS3, WebGL</p>
+        <!-- Skills Matrix -->
+        <section id="skills">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3>Languages & Web</h3>
+                    <p>Python (Pandas, NumPy, Spatial Libraries), SQL (PostgreSQL, MySQL), JavaScript, HTML5/CSS3 (WebGL Core).</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Cloud & AI</h3>
+                    <p>Google Cloud Platform (GCP), Cloud Run, Serverless Functions, Vertex AI, IBM Watson, GitHub CI/CD.</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Telemetry Forensics</h3>
+                    <p>GPS Spoofing Detection, NMEA Data Parsing, Signal-to-Noise Ratio Diagnostics, Real-Time Anomaly Alert Systems.</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Operations & WMS</h3>
+                    <p>Enterprise Warehouse Management Systems (WMS), ERP Integrations, Supply Chain Telemetry, Stock Auditing.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Cloud & AI</h3>
-                <p>GCP, Cloud Run, Vertex AI, IBM Watson</p>
+        </section>
+
+        <!-- GeoSense Case Study -->
+        <section id="projects">
+            <h2>GeoSense: Advanced 3D Geospatial Forensic Engine</h2>
+            <p class="project-meta">Lead Architect & Developer | Timeline: 04/2026</p>
+            
+            <div class="project-layout">
+                <!-- Asset 1 -->
+                <div class="project-column">
+                    <!-- PASTE TERMINAL IMAGE DIRECT LINK BELOW -->
+                    <img src="https://postimg.cc" alt="Backend Terminal Logs" class="project-img">
+                    <h3>1. Backend Telemetry Engine</h3>
+                    <ul>
+                        <li><strong>Event-Driven Ingestion:</strong> Python execution pipeline intercepting raw payloads via secure endpoints.</li>
+                        <li><strong>NLP Semantic Isolation:</strong> Real-time keyword parsing using an IBM Watson NLU gateway.</li>
+                        <li><strong>Ultra-Low Latency Alerting:</strong> Sub-30ms packet broadcasting straight to an eSIM wrist node via Telegram Bot APIs.</li>
+                    </ul>
+                </div>
+
+                <!-- Asset 2 -->
+                <div class="project-column">
+                    <!-- PASTE POWER BI IMAGE DIRECT LINK BELOW -->
+                    <img src="https://postimg.cc" alt="Analytical Frontend Dashboard" class="project-img">
+                    <h3>2. Analytical Frontend Dashboard</h3>
+                    <ul>
+                        <li><strong>Geospatial Intelligence:</strong> Interactive mapping layer isolating spatial anomalies across transportation corridors.</li>
+                        <li><strong>Velocity Anomaly Flags:</strong> Dynamic rule-based sorting to map coordinate-hopping logic.</li>
+                        <li><strong>Operational Filters:</strong> Built-in parameters tracking threat timelines for fleet coordinator audits.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="card">
-                <h3>Telemetry & Forensics</h3>
-                <p>GPS Spoofing, NMEA Parsing, Anomaly Alerts</p>
-            </div>
-            <div class="card">
-                <h3>AI & Logistics</h3>
-                <p>RLHF, Prompt Engineering, WMS, ERP Integration</p>
-            </div>
-        </div>
+        </section>
 
-        <h2 id="geosense" style="margin-top: 4rem;">GeoSense: Advanced 3D Geospatial Forensic Engine</h2>
-        <p style="color: #94a3b8;">A decoupled, event-driven diagnostic architecture designed to capture real-time telemetry anomalies, parse geospatial data packet stream variations, and trigger sub-30ms edge notifications.</p>
-
-        <div class="upload-box">
-            [ CLICK TO UPLOAD TERMINAL LOG SCREENSHOT ]
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h3>1. Backend Telemetry Engine</h3>
-                <p><strong>Event-Driven Ingestion:</strong> Python execution pipeline intercepting raw payloads via secure endpoints.</p>
-                <p><strong>NLP Semantic Isolation:</strong> Real-time keyword parsing (e.g., 'critical tracking anomaly') using IBM Watson NLU.</p>
-                <p><strong>Ultra-Low Latency Alerting:</strong> Tracks sub-30ms packet broadcasting directly to an eSIM wrist node.</p>
-            </div>
-        </div>
-
-        <div class="upload-box">
-            [ CLICK TO UPLOAD POWER BI SCREENSHOT ]
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h3>2. Analytical Frontend Dashboard</h3>
-                <p><strong>Geospatial Intelligence:</strong> Interactive mapping layer isolating specific spatial anomalies across transportation corridors.</p>
-                <p><strong>Velocity Anomaly Flags:</strong> Dynamic rule-based sorting to map coordinate-hopping logic.</p>
-                <p><strong>Operational Filters:</strong> Built-in date parameters tracking isolated threat timelines for fleet auditing.</p>
-            </div>
-        </div>
-
-        <h2 id="contact" style="margin-top: 4rem;">Ready to Engineer the Future?</h2>
-        <p style="color: #94a3b8; margin-bottom: 2rem;">Available for opportunities in IoT Architecture, Data Analytics, and Software Development.</p>
-        
-        <div class="card" style="max-width: 500px;">
-            <p><strong>Email:</strong> nikhilkr51@gmail.com</p>
-            <p><strong>Phone:</strong> +91-9048871505</p>
-            <p><strong>Location:</strong> Kerala, India</p>
-            <p><strong>Website:</strong> nikhilkrishnan.dev</p>
-        </div>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Nikhilkrishnan Hari Krishnan. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="exp-item">
+                <div class="exp-title">AI Training & Data Evaluation Specialist</div>
+                <div class="exp-meta">Clickworker / CrowdGen (Appen) | 12/2025 – Present</div>
+                <ul>
+Update layout template
