@@ -15,14 +15,12 @@
             line-height: 1.6;
             color: #e2e8f0;
             background-color: #0f172a;
-            padding: 0;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        /* Navigation */
         nav {
             background-color: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(8px);
@@ -41,7 +39,6 @@
             font-weight: 800;
             font-size: 1.5rem;
             color: #38bdf8;
-            letter-spacing: 1px;
         }
         nav ul {
             display: flex;
@@ -57,13 +54,9 @@
         nav a:hover {
             color: #38bdf8;
         }
-        /* Hero Section */
         .hero {
             padding: 6rem 0;
             background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 50%);
-        }
-        .hero-content {
-            max-width: 800px;
         }
         .hero h1 {
             font-size: 3rem;
@@ -76,6 +69,7 @@
             font-size: 1.25rem;
             color: #94a3b8;
             margin-bottom: 2.5rem;
+            max-width: 800px;
         }
         .btn-group {
             display: flex;
@@ -93,51 +87,44 @@
             background-color: #38bdf8;
             color: #0f172a;
         }
-        .btn-primary:hover {
-            background-color: #0ea5e9;
-        }
         .btn-secondary {
             border: 1px solid #334155;
             color: #f8fafc;
         }
-        .btn-secondary:hover {
-            background-color: #1e293b;
-        }
-        /* Grid Section */
         .sections {
             padding: 4rem 0;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 2rem 0;
         }
         .card {
             background-color: #1e293b;
             border: 1px solid #334155;
             padding: 2rem;
             border-radius: 12px;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-4px);
         }
         .card h3 {
-            color: #f8fafc;
+            color: #38bdf8;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
         }
-        .card p {
-            color: #94a3b8;
+        .upload-box {
+            border: 2px dashed #334155;
+            padding: 3rem;
+            text-align: center;
+            background: #111827;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            color: #64748b;
+            cursor: pointer;
         }
-        /* Footer */
         footer {
             border-top: 1px solid #1e293b;
             padding: 2rem 0;
             text-align: center;
             color: #64748b;
-            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -145,7 +132,7 @@
 
     <nav>
         <div class="container nav-content">
-            <div class="logo">NK</div>
+            <div class="logo">[NK]</div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#tech-stack">Tech Stack</a></li>
@@ -156,37 +143,105 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <h1>Architecting Real-Time Intelligence</h1>
-            <p><strong>Nikhilkrishnan Hari Krishnan (NK)</strong> | Software Developer, IoT Architect & Data Analytics Specialist. Bridging the gap between physical telemetry, automated cloud infrastructure, and enterprise logistics.</p>
-            <div class="btn-group">
-                <a href="#geosense" class="btn btn-primary">View GeoSense Engine</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
+    <header class="hero container">
+        <h1>Architecting Real-Time Intelligence</h1>
+        <p><strong>Nikhilkrishnan Hari Krishnan (NK)</strong> | Software Developer, IoT Architect & Data Analytics Specialist. Bridging the gap between physical telemetry, automated cloud infrastructure, and enterprise logistics.</p>
+        <div class="btn-group">
+            <a href="#geosense" class="btn btn-primary">View GeoSense Engine</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
     </header>
 
     <main class="container sections">
+        
+        <h2>Engineering Smart Spaces & Intelligent Data Pipelines</h2>
+        <p style="color: #94a3b8; margin-bottom: 2rem;">Innovative and results-driven Software Developer & IoT Architect with expertise in data analytics, cloud infrastructure, and enterprise logistics systems. Proven track record in designing real-time telemetry diagnostics, developing automated data pipelines, and engineering custom 3D WebGL data layers.</p>
+
         <div class="grid">
             <div class="card">
-                <h3>Engineering</h3>
-                <p>Innovative and results-driven architecture focused on building robust, scalable applications and seamless systems optimization.</p>
+                <h3>99.5% Accuracy</h3>
+                <p>Operational Excellence: Driving precision in enterprise logistics using advanced Python and SQL automated data pipelines.</p>
             </div>
             <div class="card">
-                <h3>Smart Spaces</h3>
-                <p>Integrating physical telemetry and IoT hardware arrays to design responsive, connected, and intelligent physical environments.</p>
+                <h3>3D WebGL</h3>
+                <p>Custom Data Layers: Engineering immersive, real-time telemetry diagnostics and visualizations.</p>
             </div>
             <div class="card">
-                <h3>Intelligent Data Pipelines</h3>
-                <p>Structuring high-throughput streaming pipelines to capture, process, and clean complex telemetry data for enterprise logistics analytics.</p>
+                <h3>AI RLHF</h3>
+                <p>Model Evaluation: Expertise in fine-tuning and evaluating artificial intelligence responses.</p>
+            </div>
+            <div class="card">
+                <h3>WMS Architecture</h3>
+                <p>Google & IBM Certified: Certified professional in designing robust cloud infrastructure and enterprise logistics systems.</p>
             </div>
         </div>
+
+        <h2 style="margin-top: 4rem;">Technical Arsenal</h2>
+        <p style="color: #94a3b8;">A comprehensive stack bridging cloud infrastructure, AI evaluation, and telemetry forensics.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Languages & Web</h3>
+                <p>Python, SQL, JS, HTML5/CSS3, WebGL</p>
+            </div>
+            <div class="card">
+                <h3>Cloud & AI</h3>
+                <p>GCP, Cloud Run, Vertex AI, IBM Watson</p>
+            </div>
+            <div class="card">
+                <h3>Telemetry & Forensics</h3>
+                <p>GPS Spoofing, NMEA Parsing, Anomaly Alerts</p>
+            </div>
+            <div class="card">
+                <h3>AI & Logistics</h3>
+                <p>RLHF, Prompt Engineering, WMS, ERP Integration</p>
+            </div>
+        </div>
+
+        <h2 id="geosense" style="margin-top: 4rem;">GeoSense: Advanced 3D Geospatial Forensic Engine</h2>
+        <p style="color: #94a3b8;">A decoupled, event-driven diagnostic architecture designed to capture real-time telemetry anomalies, parse geospatial data packet stream variations, and trigger sub-30ms edge notifications.</p>
+
+        <div class="upload-box">
+            [ CLICK TO UPLOAD TERMINAL LOG SCREENSHOT ]
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>1. Backend Telemetry Engine</h3>
+                <p><strong>Event-Driven Ingestion:</strong> Python execution pipeline intercepting raw payloads via secure endpoints.</p>
+                <p><strong>NLP Semantic Isolation:</strong> Real-time keyword parsing (e.g., 'critical tracking anomaly') using IBM Watson NLU.</p>
+                <p><strong>Ultra-Low Latency Alerting:</strong> Tracks sub-30ms packet broadcasting directly to an eSIM wrist node.</p>
+            </div>
+        </div>
+
+        <div class="upload-box">
+            [ CLICK TO UPLOAD POWER BI SCREENSHOT ]
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>2. Analytical Frontend Dashboard</h3>
+                <p><strong>Geospatial Intelligence:</strong> Interactive mapping layer isolating specific spatial anomalies across transportation corridors.</p>
+                <p><strong>Velocity Anomaly Flags:</strong> Dynamic rule-based sorting to map coordinate-hopping logic.</p>
+                <p><strong>Operational Filters:</strong> Built-in date parameters tracking isolated threat timelines for fleet auditing.</p>
+            </div>
+        </div>
+
+        <h2 id="contact" style="margin-top: 4rem;">Ready to Engineer the Future?</h2>
+        <p style="color: #94a3b8; margin-bottom: 2rem;">Available for opportunities in IoT Architecture, Data Analytics, and Software Development.</p>
+        
+        <div class="card" style="max-width: 500px;">
+            <p><strong>Email:</strong> nikhilkr51@gmail.com</p>
+            <p><strong>Phone:</strong> +91-9048871505</p>
+            <p><strong>Location:</strong> Kerala, India</p>
+            <p><strong>Website:</strong> nikhilkrishnan.dev</p>
+        </div>
+
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 NK. Innovative IoT & Software Engineering.</p>
+            <p>&copy; 2025 Nikhilkrishnan Hari Krishnan. All rights reserved.</p>
         </div>
     </footer>
 
